@@ -12058,6 +12058,10 @@ in {
     };
   };
 
+  # Python bindings to gnome2
+  gnome_python = if isPy3k then throw "gnome_python not supported for interpreter ${python.executable}" else
+    pkgs.gnome2.gnome_python.override{python2Packages=self;};
+
   goobook = buildPythonPackage rec {
     name = "goobook-1.9";
     disabled = isPy3k;
