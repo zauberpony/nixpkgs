@@ -51,6 +51,7 @@ stdenv.mkDerivation rec {
     mkdir -p $out/bin
     cp bin/kafka* $out/bin
     cp bin/connect* $out/bin
+    cp bin/zookeeper* $out/bin
 
     # allow us the specify logging directory using env
     substituteInPlace $out/bin/kafka-run-class.sh \

@@ -7863,6 +7863,8 @@ with pkgs;
 
   conan = callPackage ../development/tools/build-managers/conan { };
 
+  confluent = callPackage ../development/tools/confluent { };
+
   cookiecutter = pythonPackages.cookiecutter;
 
   corundum = callPackage ../development/tools/corundum { };
